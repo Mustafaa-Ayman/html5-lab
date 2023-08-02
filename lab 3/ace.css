@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('path/to/bebas-neue.woff2') format('woff2'),
+         url('path/to/bebas-neue.woff') format('woff');
+    
+}
+
+body {
+   
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.container {
+    height: 600px;
+    width: 400px;
+    border: 7px rebeccapurple solid;
+    border-radius: 20px;
+    position: relative; 
+}
+
+.first-ace {
+    color: #000;
+    font-size: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.second-ace {
+    color: #000;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.heart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#heart {
+    position: relative;
+    
+    width: 100px;
+    height: 90px;
+    transform: rotate(180deg); /* Apply the 180-degree rotation */
+}
+
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+#heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+#triangle-up {
+    position: absolute;
+    left: 180px;
+    top: 265px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 100px solid red;
+}
